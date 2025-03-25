@@ -2,7 +2,7 @@ const mysql = require("mysql2/promise");
 const sshClient = require("ssh2").Client;
 
 const sshConfig = {
-  host: process.env.SSH_HOST,
+  host: process.env.server272.web-hosting.com,
   port: parseInt(process.env.SSH_PORT, 10),
   username: process.env.SSH_USERNAME,
   password: process.env.SSH_PASSWORD,
