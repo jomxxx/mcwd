@@ -32,6 +32,10 @@ if (!dbConfig.password)
   throw new Error("Missing DB_PASSWORD in environment variables.");
 if (!dbConfig.database)
   throw new Error("Missing DB_NAME in environment variables.");
+if (!process.env.SSH_HOST) {
+    console.warn("Warning: SSH_HOST is missing but ignored.");
+}
+
 
 let pool;
 
