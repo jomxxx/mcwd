@@ -2,17 +2,17 @@ const mysql = require("mysql2/promise");
 const sshClient = require("ssh2").Client;
 
 const sshConfig = {
-  host: process.env.SSH_HOST,
-  port: parseInt(process.env.SSH_PORT, 10),
-  username: process.env.SSH_USERNAME,
-  password: process.env.SSH_PASSWORD,
+  host: process.env.SSH_HOST || "server272.web-hosting.com",
+  port: parseInt(process.env.SSH_PORT, 10) || 21098,
+  username: process.env.SSH_USERNAME || "avsroekc",
+  password: process.env.SSH_PASSWORD || "fUHanIBpYPkL",
 };
 
 const dbConfig = {
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
+  host: process.env.DB_HOST || "127.0.0.1",
+  user: process.env.DB_USER || "avsroekc_demo",
+  password: process.env.DB_PASSWORD || "okcpass@1234",
+  database: process.env.DB_NAME || "avsroekc_appointments",
 };
 
 // Validate environment variables
